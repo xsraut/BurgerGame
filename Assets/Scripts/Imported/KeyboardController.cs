@@ -21,12 +21,14 @@ public class KeyboardController : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
 
     public Transform dummyTransform;
+    public int firstOrderLayer;
 
     // Start is called before the first frame update
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         fruitPos = null;
+        firstOrderLayer--;
     }
 
     // Update is called once per frame
@@ -91,8 +93,18 @@ public class KeyboardController : MonoBehaviour
             _spriteRenderer.sprite = HandSprite;
         }
 
-        Debug.Log(fruitPos.name); 
+        //Debug.Log(enterFruit); 
 
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, 0.2f, transform.position, 0.2f);
+        if (hit)
+        {
+            Debug.Log(hit.transform.name);
+        }
+        if(hit && Input.GetKey(pickAndDrop))
+        {
+            hit.transform.position = transform.position;
+            
+        }
     }
 
 
@@ -103,15 +115,15 @@ public class KeyboardController : MonoBehaviour
 
         enterFruit = true;
         fruitPos = collision.collider.transform;
+        fruitPos.GetComponent<SpriteRenderer>().sortingOrder = firstOrderLayer + 1;
 
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.tag == "fruit")
-        {
+
             enterFruit = false;
-        }
+
     }
 
     
