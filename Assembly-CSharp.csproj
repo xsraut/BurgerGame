@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{68B1F920-CB78-B27B-6AF2-1799F12907C5}</ProjectGuid>
+    <ProjectGuid>{3057E01B-423E-D0C4-8175-DF0947574BC9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,7 +53,10 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\level1.cs" />
     <Compile Include="Assets\Scripts\Imported\KeyboardController.cs" />
+    <Compile Include="Assets\Scripts\Imported\HandController.cs" />
+    <Compile Include="Assets\Scripts\ingredientScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
