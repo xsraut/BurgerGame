@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\Imported\KeyboardController.cs" />
     <Compile Include="Assets\Scripts\Imported\HandController.cs" />
     <Compile Include="Assets\Scripts\ingredientScript.cs" />
+    <Compile Include="Assets\Scripts\Score.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -37,7 +37,7 @@ public class HandController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(cam.WorldToScreenPoint(transform.position));
+        //Debug.Log(cam.WorldToScreenPoint(transform.position));
 
         if (Input.GetKey(pickAndDrop))
         {

@@ -45,6 +45,8 @@ public class level1 : MonoBehaviour
     {
         if (pointer < ingredientsByOrder.Length)
         {
+            FindObjectOfType<Score>().IncreaseScore();
+
             pointer++;
             guideAnim();
             ingredientsByOrder[pointer].GetComponent<SpriteRenderer>().sortingOrder += pointer;
